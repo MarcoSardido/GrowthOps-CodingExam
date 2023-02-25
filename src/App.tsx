@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     const getUserAPI = async () => {
       try {
-        const result = await axios('http://www.mocky.io/v2/5d73bf3d3300003733081869')
+        const result = await axios('https://www.mocky.io/v2/5d73bf3d3300003733081869')
         setUserData(result.data)
       } catch (error) {
         console.error(`Error fetching data: ${error}`)
