@@ -101,8 +101,7 @@ function App() {
      console.log(result)
     }
   }
-
-  // countMe();
+  countMe();
 
   return (
     <div className="App">
