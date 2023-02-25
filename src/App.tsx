@@ -96,7 +96,7 @@ function App() {
     //       If each value is multitple of 5 then print "Bar"
     //       Otherwise print the value
     
-    for (let index = 1; index <= 10; index++) {
+    for (let index = 1; index <= 100; index++) {
       const result = index % 3 == 0 ? 'Foo' : index % 5 == 0 ? "Bar" : index
      console.log(result)
     }
