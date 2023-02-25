@@ -1,7 +1,7 @@
-import React from 'react'
 import {TUserData} from '../../App'
 import avatar from '../../assets/userphoto.png'
 
+// Types for user props
 type userProps = {
     dataProp: TUserData
 }

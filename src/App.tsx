@@ -1,11 +1,10 @@
-import './App.css'
-
 import React, { useEffect, useRef, useState } from 'react'
 
 import User from './Components/User/User'
 import axios from 'axios'
 import mainLogo from './assets/logo.png'
 
+// Types for address object
 type TAddress = {
   street: string;
   suite: string;
@@ -13,6 +12,7 @@ type TAddress = {
   zipcode: string;
 }
 
+// Types for user data API
 export type TUserData = {
   id: number;
   name: string;
@@ -25,14 +25,12 @@ export type TUserData = {
 }
 
 function App() {
-  
   // Hooks
   const [userData, setUserData] = useState<TUserData[]>([])
   const [filteredAge, setFilteredAge] = useState<TUserData[]>([])
   const dateRef = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {
-    
     const getUserAPI = async () => {
       try {
         const result = await axios('http://www.mocky.io/v2/5d73bf3d3300003733081869')
@@ -47,6 +45,11 @@ function App() {
   
 
   //Functions
+
+  /**
+   * @params handleFilter
+   * This function filters the age of the user data
+  */
   const handleFilter = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const option = e.currentTarget.value;
 
@@ -152,7 +155,6 @@ function App() {
 
         <hr className="h-1 my-8 mx-auto bg-[#eeee] border-0 rounded"></hr>
 
-        {/* grid grid-rows-4 grid-flow-col gap-4 */}
         <div className="flex flex-wrap gap-3 justify-center">
           {filteredAge.length > 0 ? 
             (filteredAge.map((user, idx) => (
@@ -165,7 +167,6 @@ function App() {
         </div>
 
         <hr className="h-1  my-8 mx-auto bg-[#eeee] border-0 rounded"></hr>
-
         
         <label htmlFor='lblDate' className="block mb-2 text-sm font-medium text-gray-900">Filter By Age:</label>
         <div className="flex flex-row gap-2">
@@ -176,9 +177,7 @@ function App() {
             convert
           </button>
         </div>
-
       </div>
-      
     </div>
   )
 }
