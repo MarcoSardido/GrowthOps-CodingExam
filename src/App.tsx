@@ -142,7 +142,7 @@ function App() {
       <div className="container w-full p-[5%] my-10">
         
         <label htmlFor='lblFilterAge' className="block mb-2 text-sm font-medium text-gray-900">Filter By Age:</label>
-        <select id='lblFilterAge' className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-rose-500 focus:border-rose-500 block w-full md:w-[18rem] lg:w-[20rem] p-2.5'
+        <select id='lblFilterAge' className='bg-gray-50 border border-gray-300 text-gray-900 focus:ring-rose-500 focus:border-rose-500 block w-full md:w-[18rem] lg:w-[20rem] p-2.5'
          onChange={(e) => handleFilter(e)}>
           <option value="all">All</option>
           <option value="teen">20 and below</option>
@@ -166,9 +166,17 @@ function App() {
 
         <hr className="h-1  my-8 mx-auto bg-[#eeee] border-0 rounded"></hr>
 
+        
         <label htmlFor='lblDate' className="block mb-2 text-sm font-medium text-gray-900">Filter By Age:</label>
-        <input id='lblDate' type='date' ref={dateRef}  />
-        <button onClick={convertDateFormat}>convert</button>
+        <div className="flex flex-row gap-2">
+          <input id='lblDate' type='date' ref={dateRef} className='bg-gray-50 border border-gray-300 text-gray-900 focus:ring-rose-500 focus:border-rose-500 block w-full md:w-[18rem] lg:w-[20rem] p-2.5' />
+          <button onClick={convertDateFormat}
+          className='focus:outline-none text-white bg-rose-700 hover:bg-rose-800 focus:ring-4 focus:ring-rose-300 w-32 font-medium text-sm px-5 py-2.5 mr-2'
+          >
+            convert
+          </button>
+        </div>
+
       </div>
       
     </div>
