@@ -167,7 +167,7 @@ function App() {
 
         <hr className="h-1  my-8 mx-auto bg-[#eeee] border-0 rounded"></hr>
         
-        <label htmlFor='lblDate' className="block mb-2 text-sm font-medium text-gray-900">Filter By Age:</label>
+        <label htmlFor='lblDate' className="block mb-2 text-sm font-medium text-gray-900">Date</label>
         <div className="flex flex-row gap-2">
           <input id='lblDate' type='date' ref={dateRef} className='bg-gray-50 border border-gray-300 text-gray-900 focus:ring-rose-500 focus:border-rose-500 block w-full md:w-[18rem] lg:w-[20rem] p-2.5' />
           <button onClick={convertDateFormat}
